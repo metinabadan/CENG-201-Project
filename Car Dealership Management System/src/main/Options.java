@@ -1,3 +1,4 @@
+package main;
 public class Options implements toString
 {
     private boolean seatHeader;
