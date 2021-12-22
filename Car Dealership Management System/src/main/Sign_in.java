@@ -164,7 +164,7 @@ public class Sign_in extends javax.swing.JFrame{
         jPanel3.add(lblinvalidpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 240, 20));
 
         lblinvalidnick.setForeground(new java.awt.Color(255, 0, 0));
-        jPanel3.add(lblinvalidnick, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 180, 20));
+        jPanel3.add(lblinvalidnick, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 230, 20));
 
         exit.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         exit.setForeground(new java.awt.Color(255, 0, 0));
@@ -243,6 +243,13 @@ public class Sign_in extends javax.swing.JFrame{
         if(!tfnickname.getText().isEmpty()){
             lblinvalidnick.setText("");
         }
+          try {
+            if(nickFinder(tfnickname.getText()) != null){
+                lblinvalidnick.setText("This nickname has already taken!");
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Sign_in.class.getName()).log(Level.SEVERE, null, ex);
+        }
         if(String.valueOf(pfpassword.getPassword()).length()<=5){
            lblinvalidpass.setText("*Password length 6 or higher recommended!");
        
@@ -250,23 +257,27 @@ public class Sign_in extends javax.swing.JFrame{
         if(String.valueOf(pfpassword.getPassword()).length()>5){
             lblinvalidpass.setText("");
         } 
-        if(!tfnickname.getText().isEmpty() && String.valueOf(pfpassword.getPassword()).length()>5){
-            
-            try {
-                nickWriteFile(tfnickname.getText());
-            } catch (IOException ex) {
-                Logger.getLogger(Sign_in.class.getName()).log(Level.SEVERE, null, ex);
+        try {
+            if(!tfnickname.getText().isEmpty() && (String.valueOf(pfpassword.getPassword()).length()>5 && nickFinder(tfnickname.getText()) == null)){
+                
+                try {
+                    nickWriteFile(tfnickname.getText());
+                } catch (IOException ex) {
+                    Logger.getLogger(Sign_in.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
+                try {
+                    passWriteFile(pfpassword.getPassword());
+                } catch (IOException ex) {
+                    Logger.getLogger(Sign_in.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
+                
+                lbRegisteration.setText("Registeration Completed!");
+                lbRegisteration.setForeground(Color.blue);
             }
-            
-            try {
-                passWriteFile(pfpassword.getPassword());
-            } catch (IOException ex) {
-                Logger.getLogger(Sign_in.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-             
-            lbRegisteration.setText("Registeration Completed!"); 
-            lbRegisteration.setForeground(Color.blue);
+        } catch (IOException ex) {
+            Logger.getLogger(Sign_in.class.getName()).log(Level.SEVERE, null, ex);
         }
        
         
