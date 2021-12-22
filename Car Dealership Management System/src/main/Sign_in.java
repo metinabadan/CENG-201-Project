@@ -29,9 +29,13 @@ public class Sign_in extends javax.swing.JFrame{
     /**
      * Creates new form Sign_in2
      */
+        
+    
     public Sign_in() {
         this.setResizable(false);
         initComponents();
+        
+         
     }
 
     /**
@@ -239,16 +243,27 @@ public class Sign_in extends javax.swing.JFrame{
         
         if(tfnickname.getText().isEmpty()){
             lblinvalidnick.setText("*Invalid nickname!");
+            try {
+                FileWriter nickWriter = new FileWriter("nicknames.txt",true);
+            } catch (IOException ex) {
+                Logger.getLogger(Sign_in.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if(!tfnickname.getText().isEmpty()){
             lblinvalidnick.setText("");
+            try {
+                FileWriter nickWriter = new FileWriter("nicknames.txt",true);
+            } catch (IOException ex) {
+                Logger.getLogger(Sign_in.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
           try {
             if(nickFinder(tfnickname.getText()) != null){
                 lblinvalidnick.setText("This nickname has already taken!");
             }
         } catch (IOException ex) {
-            Logger.getLogger(Sign_in.class.getName()).log(Level.SEVERE, null, ex);
+            
+            //Logger.getLogger(Sign_in.class.getName()).log(Level.SEVERE, null, ex);
         }
         if(String.valueOf(pfpassword.getPassword()).length()<=5){
            lblinvalidpass.setText("*Password length 6 or higher recommended!");
@@ -258,7 +273,7 @@ public class Sign_in extends javax.swing.JFrame{
             lblinvalidpass.setText("");
         } 
         try {
-            if(!tfnickname.getText().isEmpty() && (String.valueOf(pfpassword.getPassword()).length()>5 && nickFinder(tfnickname.getText()) == null)){
+            if(!tfnickname.getText().isEmpty() && (String.valueOf(pfpassword.getPassword()).length()>5 && (Integer) nickFinder(tfnickname.getText()) == null)){
                 
                 try {
                     nickWriteFile(tfnickname.getText());
@@ -277,7 +292,8 @@ public class Sign_in extends javax.swing.JFrame{
                 lbRegisteration.setForeground(Color.blue);
             }
         } catch (IOException ex) {
-            Logger.getLogger(Sign_in.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("AAAAAAAA");
+            //Logger.getLogger(Sign_in.class.getName()).log(Level.SEVERE, null, ex);
         }
        
         
@@ -323,6 +339,7 @@ int xx,xy;
                 this.setVisible(false);
                 new Home().setVisible(true);
             }
+            
             else{
                 lbRegisteration.setText("Nickname/password incorrect!");
                 lbRegisteration.setForeground(Color.red);
@@ -356,7 +373,9 @@ int xx,xy;
    public void nickWriteFile(String element)throws IOException{
         try (FileWriter nickWriter = new FileWriter("nicknames.txt",true)) {
             nickWriter.write(element+"\n");
+            
         }
+        
    }
    public void passWriteFile(char[] element)throws IOException{
         try (FileWriter passwordWriter = new FileWriter("passwordss.txt",true)) {
@@ -451,6 +470,6 @@ int xx,xy;
     private javax.swing.JLabel lblinvalidnick;
     private javax.swing.JLabel lblinvalidpass;
     private javax.swing.JPasswordField pfpassword;
-    private javax.swing.JTextField tfnickname;
+    public static javax.swing.JTextField tfnickname;
     // End of variables declaration//GEN-END:variables
 }

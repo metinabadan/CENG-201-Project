@@ -20,6 +20,7 @@ public class Home extends javax.swing.JFrame {
     public Home() {
         this.setResizable(false);
         initComponents();
+        lblnick.setText(Sign_in.tfnickname.getText());
     }
 
     /**
@@ -35,11 +36,13 @@ public class Home extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         exit = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        lblnick = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel14 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -102,10 +105,11 @@ public class Home extends javax.swing.JFrame {
         });
         jPanel2.add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(822, 10, 30, 40));
 
-        jLabel15.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("ICar");
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, -1, -1));
+        lblnick.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        lblnick.setForeground(new java.awt.Color(255, 255, 255));
+        lblnick.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblnick.setText("text");
+        jPanel2.add(lblnick, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 150, 150, -1));
 
         jTextField1.setBackground(new java.awt.Color(45, 118, 232));
         jTextField1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -121,6 +125,15 @@ public class Home extends javax.swing.JFrame {
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/search_20px_1.png"))); // NOI18N
         jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 50, 40));
+
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons8_user_90px.png"))); // NOI18N
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 20, 130, 120));
+
+        jLabel18.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("ICar");
+        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 240));
 
@@ -581,8 +594,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -601,5 +615,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblnick;
     // End of variables declaration//GEN-END:variables
 }
