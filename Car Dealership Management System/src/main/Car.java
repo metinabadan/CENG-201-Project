@@ -1,7 +1,7 @@
 package main;
 public abstract class Car implements toString
 {
-    protected int ID;
+   protected int ID;
     protected String color;
     protected String carType;
     protected String fuelType;
@@ -26,6 +26,9 @@ public abstract class Car implements toString
         return "CAR PROPERTIES\n" + "Color: " + color + "\nCar Type: " + carType + "\nFuel Type: " + fuelType + "\nDate of Production" +
                 productionDate + "\nGearbox Type" + gearbox + "\n";
     }
+
+    
+    
     
     public static void sellCar()
     {

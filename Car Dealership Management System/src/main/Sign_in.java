@@ -318,7 +318,7 @@ int xx,xy;
 
     private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
         // TODO add your handling code here:
-        System.exit(0);
+         new SuretoExit().setVisible(true);
     }//GEN-LAST:event_exitMousePressed
 
     private void jPanel2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseReleased

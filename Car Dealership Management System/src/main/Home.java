@@ -429,7 +429,7 @@ public class Home extends javax.swing.JFrame {
 
     private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
         // TODO add your handling code here:
-        System.exit(0);
+         new SuretoExit().setVisible(true);
     }//GEN-LAST:event_exitMousePressed
 
     private void jPanel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseEntered
@@ -450,6 +450,7 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
          xx = evt.getX();
         xy = evt.getY();
+        this.setCursor(Cursor.HAND_CURSOR);
         
     }//GEN-LAST:event_jPanel2MousePressed
 
@@ -615,6 +616,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JLabel lblnick;
+    public static javax.swing.JLabel lblnick;
     // End of variables declaration//GEN-END:variables
 }

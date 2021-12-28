@@ -6,14 +6,14 @@ public class Engine implements toString, CanStart
     private int hp;
     private int cc;
     private String engineType;
-    private int numberOfCylinders;
+   // private int numberOfCylinders;
     Random rand = new Random();
     
     
     @Override
     public void startEngine() {
-       if(this.engineBrand.equals("Mercedes")){
-           int merc_fail_prob=rand.nextInt(10000);
+       if(this.engineBrand.equals("Ferrari")){
+           int merc_fail_prob=rand.nextInt(100000);
            if(merc_fail_prob==500){
                System.out.println("Engine couldn't started...");
            }
@@ -42,13 +42,16 @@ public class Engine implements toString, CanStart
        
     }
     
-    public Engine(String engineBrand, int hp, int cc, String engineType, int numberOfCylinders) 
+    public Engine(String engineBrand, int hp, int cc, String engineType/*, int numberOfCylinders*/) 
     {   
         this.engineBrand=engineBrand;
         this.hp = hp;
         this.cc = cc;
         this.engineType = engineType;
-        this.numberOfCylinders = numberOfCylinders;
+       // this.numberOfCylinders = numberOfCylinders;
     }
-
+ @Override
+ public String toString(){
+     return     "Engine Brand: " + engineBrand + "\nEngine Power: " + hp+"\nEngine Type: "+engineType;
+ }
 }

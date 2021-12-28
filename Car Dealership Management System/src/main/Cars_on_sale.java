@@ -35,6 +35,18 @@ public class Cars_on_sale extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         exit = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        pnlHonda = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        btnhonda = new javax.swing.JButton();
+        pnlFerrari = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        btnferrari = new javax.swing.JButton();
+        pnlTesla = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        btntesla = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -114,14 +126,159 @@ public class Cars_on_sale extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        pnlHonda.setBackground(new java.awt.Color(45, 118, 232));
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons8_honda_100px_1.png"))); // NOI18N
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Honda Civic");
+
+        btnhonda.setBackground(new java.awt.Color(255, 255, 255));
+        btnhonda.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnhonda.setForeground(new java.awt.Color(45, 118, 232));
+        btnhonda.setText("Click for the transactions");
+        btnhonda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnhonda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnhondaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlHondaLayout = new javax.swing.GroupLayout(pnlHonda);
+        pnlHonda.setLayout(pnlHondaLayout);
+        pnlHondaLayout.setHorizontalGroup(
+            pnlHondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlHondaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnhonda, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlHondaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnlHondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(55, 55, 55))
+        );
+        pnlHondaLayout.setVerticalGroup(
+            pnlHondaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlHondaLayout.createSequentialGroup()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnhonda)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(pnlHonda, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, 190));
+
+        pnlFerrari.setBackground(new java.awt.Color(45, 118, 232));
+
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons8_ferrari_100px.png"))); // NOI18N
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Ferrari SF90");
+
+        btnferrari.setBackground(new java.awt.Color(255, 255, 255));
+        btnferrari.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnferrari.setForeground(new java.awt.Color(45, 118, 232));
+        btnferrari.setText("Click for the transactions");
+        btnferrari.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnferrari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnferrariActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlFerrariLayout = new javax.swing.GroupLayout(pnlFerrari);
+        pnlFerrari.setLayout(pnlFerrariLayout);
+        pnlFerrariLayout.setHorizontalGroup(
+            pnlFerrariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFerrariLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnferrari, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFerrariLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnlFerrariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(55, 55, 55))
+        );
+        pnlFerrariLayout.setVerticalGroup(
+            pnlFerrariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFerrariLayout.createSequentialGroup()
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnferrari)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(pnlFerrari, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, -1, 190));
+
+        pnlTesla.setBackground(new java.awt.Color(45, 118, 232));
+
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/images/icons8_tesla_100px.png"))); // NOI18N
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Tesla Model S");
+
+        btntesla.setBackground(new java.awt.Color(255, 255, 255));
+        btntesla.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btntesla.setForeground(new java.awt.Color(45, 118, 232));
+        btntesla.setText("Click for the transactions");
+        btntesla.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btntesla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnteslaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlTeslaLayout = new javax.swing.GroupLayout(pnlTesla);
+        pnlTesla.setLayout(pnlTeslaLayout);
+        pnlTeslaLayout.setHorizontalGroup(
+            pnlTeslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTeslaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btntesla, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTeslaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnlTeslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(55, 55, 55))
+        );
+        pnlTeslaLayout.setVerticalGroup(
+            pnlTeslaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTeslaLayout.createSequentialGroup()
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btntesla)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(pnlTesla, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 20, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,12 +316,28 @@ public class Cars_on_sale extends javax.swing.JFrame {
 
     private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
         // TODO add your handling code here:
-        System.exit(0);
+         new SuretoExit().setVisible(true);
     }//GEN-LAST:event_exitMousePressed
 
     private void jPanel1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseReleased
         this.setCursor(Cursor.DEFAULT_CURSOR);       
     }//GEN-LAST:event_jPanel1MouseReleased
+
+    private void btnhondaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhondaActionPerformed
+        new CarInfo().setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnhondaActionPerformed
+
+    private void btnferrariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnferrariActionPerformed
+        new CarInfo().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnferrariActionPerformed
+
+    private void btnteslaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnteslaActionPerformed
+        new CarInfo().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnteslaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,10 +378,22 @@ public class Cars_on_sale extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnferrari;
+    private javax.swing.JButton btnhonda;
+    private javax.swing.JButton btntesla;
     private javax.swing.JLabel exit;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    public static javax.swing.JPanel pnlFerrari;
+    public static javax.swing.JPanel pnlHonda;
+    public static javax.swing.JPanel pnlTesla;
     // End of variables declaration//GEN-END:variables
 }
